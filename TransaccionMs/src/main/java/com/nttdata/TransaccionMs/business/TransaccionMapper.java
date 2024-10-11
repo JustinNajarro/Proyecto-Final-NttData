@@ -30,6 +30,8 @@ public class TransaccionMapper {
         TransactionResponse transactionResponse = new TransactionResponse();
         transactionResponse.setTipo(mapToResponseTipoTransaccion(entity.getTipo()));
         transactionResponse.setMonto(entity.getMonto());
+        OffsetDateTime offsetDateTime = entity.getFecha().atOffset(ZoneOffset.UTC);
+        transactionResponse.setFecha(offsetDateTime);
         transactionResponse.setCuentaOrigen(entity.getCuentaOrigen());
         transactionResponse.setCuentaDestino(entity.getCuentaDestino());
 
@@ -39,5 +41,4 @@ public class TransaccionMapper {
     public TransactionResponse.TipoEnum mapToResponseTipoTransaccion(TipoTransaccionEnum tipoTransaccionEntity) {
         return TransactionResponse.TipoEnum.valueOf(tipoTransaccionEntity.name());
     }
-
 }

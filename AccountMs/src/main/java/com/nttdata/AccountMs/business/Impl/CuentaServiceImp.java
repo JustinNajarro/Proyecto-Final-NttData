@@ -103,7 +103,6 @@ public class CuentaServiceImp implements CuentaService {
                 .orElseThrow(() -> new CustomExceptions.ResourceNotFoundException("Cuenta no encontrada"));
     }
 
-
     private String generarNumeroCuentaUnico() {
         String numeroCuenta;
         boolean existe;
