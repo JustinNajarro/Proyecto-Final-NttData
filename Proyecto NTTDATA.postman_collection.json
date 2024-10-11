@@ -1,9 +1,9 @@
 {
 	"info": {
-		"_postman_id": "a02ec9dd-73bf-42eb-90a6-c4a3a72c819d",
+		"_postman_id": "771ab9c3-03ba-4964-9b64-6feac8037a26",
 		"name": "Proyecto NTTDATA",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_exporter_id": "38602689"
+		"_exporter_id": "28224588"
 	},
 	"item": [
 		{
@@ -13,7 +13,17 @@
 					"name": "Listar",
 					"request": {
 						"method": "GET",
-						"header": []
+						"header": [],
+						"url": {
+							"raw": "localhost:8091/clientes",
+							"host": [
+								"localhost"
+							],
+							"port": "8091",
+							"path": [
+								"clientes"
+							]
+						}
 					},
 					"response": []
 				},
@@ -32,11 +42,11 @@
 							}
 						},
 						"url": {
-							"raw": "localhost:8080/clientes",
+							"raw": "localhost:8091/clientes",
 							"host": [
 								"localhost"
 							],
-							"port": "8080",
+							"port": "8091",
 							"path": [
 								"clientes"
 							]
@@ -50,14 +60,14 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "localhost:8080/clientes/2",
+							"raw": "localhost:8091/clientes/1",
 							"host": [
 								"localhost"
 							],
-							"port": "8080",
+							"port": "8091",
 							"path": [
 								"clientes",
-								"2"
+								"1"
 							]
 						}
 					},
@@ -78,14 +88,14 @@
 							}
 						},
 						"url": {
-							"raw": "localhost:8080/clientes/2",
+							"raw": "localhost:8091/clientes/7",
 							"host": [
 								"localhost"
 							],
-							"port": "8080",
+							"port": "8091",
 							"path": [
 								"clientes",
-								"2"
+								"7"
 							]
 						}
 					},
@@ -97,14 +107,14 @@
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "localhost:8080/clientes/8",
+							"raw": "localhost:8091/clientes/1",
 							"host": [
 								"localhost"
 							],
-							"port": "8080",
+							"port": "8091",
 							"path": [
 								"clientes",
-								"8"
+								"1"
 							]
 						}
 					},
@@ -121,11 +131,11 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "localhost:8090/cuentas",
+							"raw": "localhost:8091/cuentas",
 							"host": [
 								"localhost"
 							],
-							"port": "8090",
+							"port": "8091",
 							"path": [
 								"cuentas"
 							]
@@ -140,7 +150,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"saldo\": 1.0,\r\n    \"tipoCuenta\": \"AHORRO\",\r\n    \"clienteId\": 1\r\n}",
+							"raw": "{\r\n    \"saldo\": 1.0,\r\n    \"tipoCuenta\": \"CORRIENTE\",\r\n    \"clienteId\": 2\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -148,11 +158,11 @@
 							}
 						},
 						"url": {
-							"raw": "localhost:8090/cuentas",
+							"raw": "localhost:8091/cuentas",
 							"host": [
 								"localhost"
 							],
-							"port": "8090",
+							"port": "8091",
 							"path": [
 								"cuentas"
 							]
@@ -166,14 +176,14 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "localhost:8090/cuentas/2",
+							"raw": "localhost:8091/cuentas/10",
 							"host": [
 								"localhost"
 							],
-							"port": "8090",
+							"port": "8091",
 							"path": [
 								"cuentas",
-								"2"
+								"10"
 							]
 						}
 					},
@@ -185,72 +195,14 @@
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "localhost:8090/cuentas/1",
+							"raw": "localhost:8091/cuentas/2",
 							"host": [
 								"localhost"
 							],
-							"port": "8090",
+							"port": "8091",
 							"path": [
 								"cuentas",
-								"1"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "Depositar",
-					"request": {
-						"method": "PUT",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n    \"saldo\": 99\r\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "localhost:8090/cuentas/2/depositar",
-							"host": [
-								"localhost"
-							],
-							"port": "8090",
-							"path": [
-								"cuentas",
-								"2",
-								"depositar"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "Retirar",
-					"request": {
-						"method": "PUT",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n    \"saldo\": 100\r\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "localhost:8090/cuentas/2/retirar",
-							"host": [
-								"localhost"
-							],
-							"port": "8090",
-							"path": [
-								"cuentas",
-								"2",
-								"retirar"
+								"2"
 							]
 						}
 					},
@@ -265,7 +217,18 @@
 					"name": "Listar",
 					"request": {
 						"method": "GET",
-						"header": []
+						"header": [],
+						"url": {
+							"raw": "localhost:8091/transacciones/historial",
+							"host": [
+								"localhost"
+							],
+							"port": "8091",
+							"path": [
+								"transacciones",
+								"historial"
+							]
+						}
 					},
 					"response": []
 				},
@@ -276,7 +239,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n  \"cuentaOrigen\": \"481cbdd3cb\",\r\n  \"monto\": 1500.0,\r\n  \"tipo\": \"DEPOSITO\"\r\n}\r\n",
+							"raw": "{\r\n  \"cuentaOrigen\": \"638cc6e3b6\",\r\n  \"monto\": 1500.0,\r\n  \"tipo\": \"DEPOSITO\"\r\n}\r\n",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -305,7 +268,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n  \"cuentaOrigen\": \"481cbdd3cb\",\r\n  \"monto\": 50.0,\r\n  \"tipo\": \"RETIRO\"\r\n}\r\n",
+							"raw": "{\r\n  \"cuentaOrigen\": \"638cc6e3b6\",\r\n  \"monto\": 1050.0,\r\n  \"tipo\": \"RETIRO\"\r\n}\r\n",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -334,7 +297,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"tipo\": \"TRANSFERENCIA\",\r\n    \"monto\": 2000.0,\r\n    \"cuentaOrigen\": \"481cbdd3cb\",\r\n    \"cuentaDestino\": \"53e5954df0\"\r\n}",
+							"raw": "{\r\n    \"tipo\": \"TRANSFERENCIA\",\r\n    \"monto\": 2000.0,\r\n    \"cuentaOrigen\": \"30b0aa9f7b\",\r\n    \"cuentaDestino\": \"638cc6e3b6\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
